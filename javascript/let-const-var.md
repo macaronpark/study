@@ -1,9 +1,9 @@
-- [var, let, const](#var-let-const)
+- [let, const, var](#let-const-var)
   - [차이점](#차이점)
   - [실행 컨텍스트 관점에서](#실행-컨텍스트-관점에서)
 - [참고](#참고)
 
-# var, let, const
+# let, const, var
 
 ## 차이점
 
@@ -61,6 +61,6 @@ function foo() {
 
 # 참고
 
-- [변수와 상수](https://ko.javascript.info/variables)
-- [오래된 var](https://ko.javascript.info/var)
-- [변수의 유효범위와 클로저](https://ko.javascript.info/closure)
+- [모던 JavaScript 튜토리얼: 변수와 상수](https://ko.javascript.info/variables)
+- [모던 JavaScript 튜토리얼: 오래된 var](https://ko.javascript.info/var)
+- [모던 JavaScript 튜토리얼: 변수의 유효범위와 클로저](https://ko.javascript.info/closure)

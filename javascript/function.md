@@ -140,6 +140,6 @@ class MyComponent extends React.Component {
 
 ## 참고
 
-- [함수 선언문 vs 함수 표현식](https://ko.javascript.info/function-expressions)
-- [화살표 함수 기본](https://ko.javascript.info/arrow-functions-basics)
-- [화살표 함수 심화](https://ko.javascript.info/arrow-functions)
+- [모던 JavaScript 튜토리얼: 함수 선언문 vs 함수 표현식](https://ko.javascript.info/function-expressions)
+- [모던 JavaScript 튜토리얼: 화살표 함수 기본](https://ko.javascript.info/arrow-functions-basics)
+- [모던 JavaScript 튜토리얼: 화살표 함수 심화](https://ko.javascript.info/arrow-functions)

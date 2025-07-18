@@ -1,4 +1,15 @@
-# Event Delegation
+- [이벤트 위임과 버블링, 캡처링](#이벤트-위임과-버블링-캡처링)
+  - [개념](#개념)
+  - [구현 예시](#구현-예시)
+  - [핵심 개념](#핵심-개념)
+    - [Event Bubbling과 Capturing](#event-bubbling과-capturing)
+    - [Event.target vs currentTarget](#eventtarget-vs-currenttarget)
+  - [장점과 단점](#장점과-단점)
+    - [✅ 장점](#-장점)
+    - [❌ 단점](#-단점)
+  - [참고](#참고)
+
+# 이벤트 위임과 버블링, 캡처링
 
 > 밭에 버섯을 심는 기능을 개발하면서, 처음에는 밭에 일일이 이벤트를 등록하다가 더 효율적인 방법을 찾는 과정에 이벤트 위임을 학습하고 적용했다.
 
