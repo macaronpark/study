@@ -6,6 +6,10 @@
 
 ### 목차
 
+#### algorithm
+
+- [↗️ Google Sheet: 알고리즘 문제 풀이 기록](https://docs.google.com/spreadsheets/d/1fbsZEK-7tj4B2WCyPIUZbWcXsDw0kylu8sBECqEotvw/edit?usp=sharing)
+
 #### browser
 
 - [접근성과 Semantic HTML](/browser/a11y.md)
