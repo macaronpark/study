@@ -21,3 +21,5 @@
 - [let, const, var](/javascript/let-const-var.md)
 - [연산자](/javascript/operator.md)
 - [조건문, 반복문](/javascript/statement.md)
+- [자료형](/javascript/type.md)
+- [클로저](/javascript/closure.md)
