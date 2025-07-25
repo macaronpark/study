@@ -11,6 +11,7 @@ button {
   height: 100%;
   background-color: white;
   border: 1px solid black;
+  cursor: pointer;
 }
 
 .calculator {
@@ -30,31 +31,22 @@ button {
   }
 
   .calculator-buttons {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     height: 100%;
 
-    .lhs {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      width: 100%;
-
-      .button-ac {
-        grid-column: 1 / 4;
-        background-color: lightgray;
-      }
-      .button-zero {
-        grid-column: 1 / 3;
-      }
+    .button-ac {
+      grid-column: 1 / 4;
+      background-color: lightgray;
     }
 
-    .rhs {
-      display: flex;
-      flex-direction: column;
-      width: 25%;
+    .button-zero {
+      grid-column: 1 / 3;
+    }
 
-      & button {
-        background-color: goldenrod;
-      }
+    .button-operator,
+    .button-equal {
+      background-color: goldenrod;
     }
   }
 }
