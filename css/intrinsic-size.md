@@ -1,3 +1,5 @@
+# Intrinsic Size
+
 > Intrinsic size is the size an element wants to be — how much space it would naturally take up if unconstrained by things like its parent element or a fixed layout.
 >
 > [MDN: Intrinsic size](https://developer.mozilla.org/en-US/docs/Glossary/Intrinsic_Size)

@@ -1,9 +1,9 @@
+# let, const, var
+
 - [let, const, var](#let-const-var)
   - [차이점](#차이점)
   - [실행 컨텍스트 관점에서](#실행-컨텍스트-관점에서)
 - [참고](#참고)
-
-# let, const, var
 
 ## 차이점
 
