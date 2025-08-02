@@ -1,106 +1,113 @@
-# 브라우저 렌더링 과정
+# 브라우저 렌더링 과정(Critical Rendering Path)
 
-> Q. 브라우저가 HTML, CSS, JS를 받아서 어떻게 화면을 만드는가?
+Q. 브라우저가 화면을 렌더링하는 과정?<br>
+Q. Reflow와 Repaint가 실행되는 시점?
 
-- [브라우저 렌더링 과정](#브라우저-렌더링-과정)
-  - [과정](#과정)
-    - [1. HTML 파싱 → DOM 트리 생성](#1-html-파싱--dom-트리-생성)
-    - [2. CSS 파싱 → CSSOM 생성](#2-css-파싱--cssom-생성)
-    - [3. Style Calculation: DOM + CSSOM → Render Tree 생성](#3-style-calculation-dom--cssom--render-tree-생성)
-    - [4. Layout (Reflow): 위치와 크기 계산](#4-layout-reflow-위치와-크기-계산)
-    - [5. Painting: 픽셀로 그리기](#5-painting-픽셀로-그리기)
-    - [6. Compositing: 레이어 조합 → 화면에 표시](#6-compositing-레이어-조합--화면에-표시)
+<br>
+
+- [브라우저 렌더링 과정(Critical Rendering Path)](#브라우저-렌더링-과정critical-rendering-path)
+  - [점진적 렌더링(Progressive Rendering)](#점진적-렌더링progressive-rendering)
+  - [CRP(Critical Rendering Path)](#crpcritical-rendering-path)
+    - [브라우저는 초기 렌더링을 위해 어떤 리소스를 기다려야 할까?](#브라우저는-초기-렌더링을-위해-어떤-리소스를-기다려야-할까)
+    - [Render-blocking resources](#render-blocking-resources)
+    - [Parser-blocking resources](#parser-blocking-resources)
   - [참고](#참고)
 
-## 과정
+<br>
+
+## 점진적 렌더링(Progressive Rendering)
+
+- 웹의 분산적 특성
+  - 브라우저는 HTML, CSS, JavaScript 파일을 받아서 페이지를 그림
+  - 앱과 다르게 모든 리소스가 준비되어있지 않음
+- 렌더링 타이밍의 딜레마
+  - 너무 빠르면: HTML만 있고 CSS, JavaScript 없이 깨진 화면 노출. 이후 다시 변경되는 좋지 않은 사용자 경험 발생
+  - 너무 느리면: 모든 리소스를 전부 기다리면 사용자가 불필요하게 오랜 시간동안 빈 화면을 보고있어야 함
+- **CRP(Critical Rendering Path)의 중요성**
+  - 브라우저의 첫 렌더링을 위해 최소한으로 필요한 리소스가 무엇인지 알아야 함
+  - CRP를 이해하면 초기 렌더링을 불필요하게 block 하지 않으면서도, 너무 일찍 렌더링되어 깨진 화면을 보여주지 않을 수 있음
+
+## CRP(Critical Rendering Path)
+
+브라우저가 초기 렌더링을 수행하기 전 거치는 단계
 
 ![The rendering process, as detailed in the previous list.](https://web.dev/static/learn/performance/understanding-the-critical-path/image/fig-1-v2.svg)
 
-### 1. HTML 파싱 → DOM 트리 생성
+- (1) HTML에서 `Document Object Model (DOM)` 구성
+- (2) CSS에서 `CSS Object Model (CSSOM)` 구성
+- (3) DOM과 CSSOM에 영향을 주는 JavasScript 적용
+- (4) DOM과 CSSOM에서 `Render Tree` 구성
+  - `display: none` => ❌ 포함되지 않음
+  - `visibility: hidden` => 🟢 포함 됨 (자리를 차지해서)
+- (5) `Style`, `Layout`: 어떤 요소를 어떻게 배치할지 확인
+- (6) `Paint`: 메모리 내 요소의 픽셀 그리기
+- (7) `Composite`: 겹치는 픽셀 합성
+- (8) `Display`: 모든 결과 픽셀을 화면에 물리적으로 그리기
 
-- 브라우저가 HTML 파싱(동기적)
+> [!NOTE]
+>
+> [chrome for developers - RenderingNG architecture](https://developer.chrome.com/docs/chromium/renderingng-architecture)에서 세부 단계와 더 자세한 설명을 확인할 수 있다.
 
-  - 외부 자원(stylesheet, script, img) 링크를 만날 때 마다 해당 자원에 대한 요청을 보냄
-    - script
-      | 속성 | 다운로드 | 파싱 중단 여부 | 실행 시점 | 실행 순서 보장 |
-      | ------- | ---- | --------- | ------------------- | --------- |
-      | 없음 (기본) |파싱 중| ⛔ 중단됨 | 다운로드 후 즉시 실행 | 파일 순서대로 |
-      | `async` | 병렬 | ⚠️ 실행 시 잠깐 중단됨 | 다운로드 후 즉시 실행 | ❌ 순서 보장 X |
-      | `defer` | 병렬 | ➡️ 중단 안 됨 | HTML 파싱 완료 후 실행 | ✅ 순서 보장 O |
+### 브라우저는 초기 렌더링을 위해 어떤 리소스를 기다려야 할까?
 
-- DOM(Document Object Model)
-  - HTML 문서를 구조화된 트리 형태로 변환
-  - 각 HTML 요소는 Node 객체로 표현됨
-  - JavaScript는 DOM API를 사용해 이 Node들을 읽기/수정/삭제/생성 가능
+기다리는 것과 안 기다리는 것이 명확히 구분됨
 
-### 2. CSS 파싱 → CSSOM 생성
+- **브라우저: "기다릴게" (Critical Resources)**
+  - HTML 일부분 (전체 아님 ❌, 브라우저가 HTML을 스트리밍 방식으로 처리하므로 전체를 기다리지 않음)
+  - `<head>` 내의 render-blocking CSS
+  - `<head>` 내의 render-blocking JavaScript
+- **브라우저: "안 기다릴게" (Non-Critical Resources)**
+  - 전체 HTML
+  - 폰트/이미지 => 나중에 로드되면서 레이아웃이 밀릴 수 있음 (CLS)
+  - `<head>` 밖의 non-render-blocking JavaScript
+  - `<head>` 밖의 non-render-blocking CSS 또는 현재 뷰포트에 적용되지 않는 CSS
+- 주의
+  - `<head>` 내에 있다고 전부 render-blocking은 아님
+  - render-blocking, parser-blocking CSS/JavaScript 개념을 알아야 함
 
-- CSSOM(CSS Object Model)
-  - 브라우저가 화면 렌더링에 필요한 **유효한 스타일 규칙들만 구조화**해서 모아놓은 객체 모델
-  - 선택자와 스타일 속성 매핑
+### Render-blocking resources
 
-### 3. Style Calculation: DOM + CSSOM → Render Tree 생성
+너무 중요해서 브라우저가 페이지 렌더링을 멈추고 기다리는 리소스
 
-- Render Tree
-  - 실제로 화면에 표시될 요소와 스타일만 추려낸 트리
-    - `display: none` => ❌ 포함되지 않음
-    - `visibility: hidden` => 🟢 포함 됨(자리를 차지해서)
-- **무엇을 그릴지**가 정해진 단계
-  - 어디에 그릴지는 아직 정해지지 않음
-- 최적화 전략
-  | 전략 | 설명 |
-  | --------------------- | ------------------------------------------------ |
-  | CSS 셀렉터는 **구체적으로** 쓰기 | 너무 복잡한 셀렉터 (`div ul > li a.active`)는 계산 비용이 큼 |
-  | CSS 상속/겹침 최소화 | 스타일이 너무 많은 곳에서 상속/겹치면 계산 부담 증가 |
-  | @import 대신 링크 사용 | `@import`는 병렬 로딩을 막고 렌더링을 지연시킴 |
-  | 불필요한 스타일 제거 | 사용하지 않는 CSS(class, id, media query 등)는 번들 크기만 키움 |
-  | CSS-in-JS 최적화 | 동적 스타일 생성 비용이 많으면 렌더링 병목 유발 (memoize 등 활용) |
+- `CSS`
+  - 브라우저가 CSS를 만나면 (인라인, 외부 파일 모두) CSS를 완전히 다운로드하고 처리할 때까지 렌더링을 중단함
+  - 현재 조건에 맞지 않는 media 속성 CSS 제외 (예: `media=print`)
+- 브라우저의 효율적 처리 방식
+  - render-blocking이라고 해서 브라우저가 아무것도 안하는 게 아님
+  - HTML 파싱과 같은 다른 작업은 계속 진행
+- 브라우저별 발전 과정
+  - 과거에는 render-blocking 리소스가 전체 페이지 렌더링을 막았음
+  - 최근 브라우저들은 **해당 리소스 아래 컨텐츠만 렌더링을 막음**
+    - => `<head>` 내 리소스의 의미: 전체 페이지 렌더링에 영향을 줌
+  - Chrome 105부터 `blocking=render` 속성으로 개발자가 명시적으로 제어 가능
+    ```html
+    <head>
+      <!-- 원래는 non-render-blocking이지만 중요한 폰트라서 기다리고 싶음 -->
+      <link rel="preload" href="critical-font.woff2" as="font" blocking="render" />
+    </head>
+    ```
 
-### 4. Layout (Reflow): 위치와 크기 계산
+### Parser-blocking resources
 
-- Render Tree를 기반으로 각 노드의 **정확한 위치(x, y)와 크기(width, height)** 계산
-- Reflow는 Layout 과정이 다시 일어나는 걸 의미
-  - 레이아웃이 변경되면 자식 요소들까지 다시 계산됨
-  - 너무 자주 발생하면 성능 문제 생김
-- Reflow 최적화 전략
-  | 전략 | 설명 |
-  | ---------------------------- | -------------------------------------------------------------------- |
-  | DOM 조작은 한번에 모아서 처리 | 반복문 안에서 DOM을 반복 조작하지 말고, DocumentFragment 등을 활용 |
-  | 스타일 변경은 클래스 변경으로 | 인라인 스타일 여러 개 바꾸는 것보다 className 토글이 더 효율적 |
-  | 레이아웃 정보 접근 최소화 | 브라우저에게 지금 당장 최신 layout 정보를 요구해서 강제로 layout을 발생시키는 `offset*`, `getBoundingClientRect()` 등의 API 사용 줄이기 |
-  | 애니메이션은 Layout을 유발하지 않는 속성 사용 | `transform`, `opacity`는 Reflow 없음. `top`, `left`, `width`는 Reflow 발생 |
+브라우저가 HTML 파싱을 진행하는 것을 막는 리소스
 
-### 5. Painting: 픽셀로 그리기
-
-- Layout에서 계산된 정보를 바탕으로 요소들을 실제 픽셀로 변환
-- 브라우저는 각 요소를 여러 레이어로 나누고 각 레이어를 별도로 paint
-- paint가 발생하는 경우: 스타일 속성 변경, 클래스 토글, 애니메이션, 텍스트 변경 등
-- Painting 최적화 전략
-  | 전략 | 설명 |
-  | ---------------------------- | ------------------------------------------------------------------------- |
-  | **Paint 비용이 큰 속성 피하기** | `box-shadow`, `border-radius`, `filter`, `background-blur` 등은 Paint 비용이 큼 |
-  | 복잡한 이미지 대신 CSS 효과 단순화 | 예: 이미지로 만든 그림자나 배경보다 간단한 색상 사용 |
-  | CSS 애니메이션에 Paint 유발 요소 쓰지 않기 | `box-shadow` 애니메이션은 성능에 큰 영향을 줌 |
-  | 클리핑/마스킹 최소화 | `clip-path`, `mask-image`는 Paint 비용 높음 |
-
-### 6. Compositing: 레이어 조합 → 화면에 표시
-
-- paint된 여러 레이어를 합쳐서 최종 화면에 출력하는 마지막 단계
-- GPU에서 합성
-- 독립 레이어가 많을수록 composition 비용 증가
-  - `z-index`, `opacity`, `transform` 등이 새로운 레이어 생성
-- 최적화 전략
-  | 전략 | 설명 |
-  | ---------------------- | ------------------------------------------ |
-  | 애니메이션은 GPU 가속되는 속성만 사용 | `transform`, `opacity`는 GPU 사용으로 성능이 좋음 |
-  | 필요할 때만 will-change 사용 | 너무 많은 요소에 `will-change` 사용하면 오히려 메모리 낭비 |
-  | 레이어 수는 최소화 | 너무 많은 합성 레이어는 오히려 GPU 부하 증가 |
-  | 하드웨어 가속을 남용하지 않기 | `translateZ(0)` 같은 트릭은 적절할 때만 사용 (과하면 역효과) |
+- `JavaScript`
+  - 기본적으로 parser-blocking (async나 defer가 없다면)
+    - DOM을 변경할 수 있기 때문
+    - parser가 멈추면 그 이후 컨텐츠에 접근할 수 없어 렌더링도 불가능
+- `<head>` 내 parser-blocking
+  - 페이지 전체 컨텐츠 렌더링을 막음
+  - 파싱이 완료될 때까지 그 전까지 받은 HTML만 렌더링할 수 있음
+  - 브라우저의 대응
+    - preload scanner라는 보조 HTML 파서 사용
+    - 주 파서가 block된 동안 미리 리소스 다운로드
+- `<script>`
+  | 속성 | 파싱 중단 여부 | 실행 시점 | 실행 순서 보장 |
+  | ----------- | ---------------------- | ---------------------- | ---------------- |
+  | 없음 (기본) | ⛔ 중단됨 | 다운로드 후 즉시 실행 | ✅ 파일 순서대로 |
+  | `async` | ⚠️ 실행 시 잠깐 중단됨 | 다운로드 후 즉시 실행 | ❌ 순서 보장 X |
+  | `defer` | ➡️ 중단 안 됨 | HTML 파싱 완료 후 실행 | ✅ 순서 보장 O |
 
 ## 참고
 
 - [web.dev - Understand the critical path](https://web.dev/learn/performance/understanding-the-critical-path)
-- [web.dev - Critical Rendering Path](https://web.dev/articles/critical-rendering-path)
-- [web.dev - Efficiently load third-party JavaScript](https://web.dev/articles/efficiently-load-third-party-javascript#css-selector-performance)
-- [web.dev - Rendering performance](https://web.dev/articles/rendering-performance)
-- [web.dev - How to create high-performance CSS animations](https://web.dev/articles/animations-guide)
