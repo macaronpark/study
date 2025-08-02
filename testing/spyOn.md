@@ -17,6 +17,7 @@ it("plantNewMushroom: 새로운 버섯을 심는 이벤트를 트리거해야 �
 
   GameLogic.plantNewMushroom({ fieldID });
 
+  // EventBus.emit 내부 구현에 의존하지 않는 테스트 코드 작성 가능
   expect(spyOnEventBus).toHaveBeenCalledWith({
     from: CONFIG.MODULE_ID.GAME_LOGIC,
     e: CONFIG.EVENT_ID.SET_NEW_MUSHROOM,

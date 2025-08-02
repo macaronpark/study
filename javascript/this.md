@@ -26,7 +26,8 @@ obj.regular();
 ```
 
 - 객체 리터럴 `{ }` 자체는 스코프를 만들지 않음
-- 전역 스코프에서 this.name은 undefined (strict mode에서)
+- 브라우저 환경에서 전역 this는 `window` => `window.name`은 undefined
+- strict mode에서 this는 undefined
 
 ## 예제 2
 
