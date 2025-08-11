@@ -14,7 +14,7 @@
 
 ### algorithm
 
-- [Google Sheet - 알고리즘 문제 풀이 기록](https://docs.google.com/spreadsheets/d/1fbsZEK-7tj4B2WCyPIUZbWcXsDw0kylu8sBECqEotvw/edit?usp=sharing)
+- [TIS(Today I Solved)](/algorithm/TIS/README.md)
 - [정렬 알고리즘](algorithm/sort.md)
 - [시간 복잡도](algorithm/time-complexity.md)
 
@@ -30,25 +30,32 @@
 - [이벤트 위임과 버블링, 캡처링](browser/event-delegation.md)
 - [PWA(Progressive Web App)](browser/pwa.md)
 - [Reflow vs. Repaint](browser/reflow-repaint.md)
+- [RESTful API](browser/restful-api.md)
 
 ### css
 
+- [Box model](css/box-model.md)
 - [그리드](css/grid.md)
 - [Intrinsic Size](css/intrinsic-size.md)
+- [Position](css/position.md)
 
 ### javascript
 
 - [Array-like Object (유사 배열)](javascript/array-like.md)
+- [배열 (Array)](javascript/array.md)
 - [클로저](javascript/closure.md)
+- [이벤트 루프 (Event loop)](javascript/event-loop.md)
 - [함수 선언문, 함수 표현식, 화살표 함수](javascript/function.md)
 - [let, const, var](javascript/let-const-var.md)
 - [부동소수점의 정밀도 한계](javascript/number.md)
 - [Object (객체)](javascript/object-map-set.md)
 - [연산자](javascript/operator.md)
 - [재귀 함수](javascript/recursion.md)
+- [얕은 복사(Shallow copy) vs. 깊은 복사(Deep copy)](javascript/shallow-and-deep-copy.md)
 - [조건문, 반복문](javascript/statement.md)
 - [this](javascript/this.md)
 - [typeof, 형변환](javascript/typeof-conversion.md)
+- [값(Value)과 참조(Reference)](javascript/value-reference.md)
 
 ### project
 
