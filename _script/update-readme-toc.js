@@ -52,6 +52,7 @@ function generateTocForDir(dirPath, relativePathPrefix = "") {
       if (entry.isDirectory()) {
         const subTocLines = generateTocForDir(fullPath, relativePath);
         if (subTocLines.length > 0) {
+          if (entry.name === "TIS") continue;
           // 서브 폴더의 파일들을 들여쓰기하여 추가
           tocLines = tocLines.concat(subTocLines.map((line) => `  ${line}`));
         }
@@ -87,9 +88,7 @@ function main() {
     toc.push(`\n### ${dirName}`);
 
     if (dirName === "algorithm") {
-      toc.push(
-        `- [Google Sheet - 알고리즘 문제 풀이 기록](https://docs.google.com/spreadsheets/d/1fbsZEK-7tj4B2WCyPIUZbWcXsDw0kylu8sBECqEotvw/edit?usp=sharing)`
-      );
+      toc.push(`- [TIS(Today I Solved)](/algorithm/TIS/README.md)`);
     }
 
     const dirPath = path.join(ROOT_DIR, dirName);
