@@ -61,7 +61,7 @@ function main() {
 
     // 파일에 쓰기
     fs.writeFileSync(README_PATH, newReadmeContent, "utf-8");
-    console.log("✅ _log/README.md 목차가 성공적으로 업데이트되었습니다.");
+    console.log("✅ _log/README.md 목차 업데이트 성공");
   } catch (error) {
     console.error("Error updating _log/README.md:", error);
   }

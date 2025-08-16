@@ -52,7 +52,9 @@ function generateTocForDir(dirPath, relativePathPrefix = "") {
       if (entry.isDirectory()) {
         const subTocLines = generateTocForDir(fullPath, relativePath);
         if (subTocLines.length > 0) {
-          if (entry.name === "TIS") continue;
+          // ! 예외 - main 함수에서 별도 처리
+          if (entry.name === "programmers") continue;
+
           // 서브 폴더의 파일들을 들여쓰기하여 추가
           tocLines = tocLines.concat(subTocLines.map((line) => `  ${line}`));
         }
@@ -80,15 +82,18 @@ function main() {
   let toc = ["## 목차"];
 
   for (const dirName of topLevelDirs) {
-    if (dirName === "_log") {
-      toc.push(`\n### _log\n- 학습 계획과 기록`);
-      continue;
-    }
-
     toc.push(`\n### ${dirName}`);
 
+    // ! _log 폴더는 README.md만 보여준다
+    if (dirName === "_log") {
+      toc.push(`- 주간 공부 계획과 실제 학습 현황 기록\n  - [_log/README.md](/_log/README.md)`);
+      continue;
+    }
+    // ! algorithm/programmers 폴더는 README.md만 보여준다
     if (dirName === "algorithm") {
-      toc.push(`- [TIS(Today I Solved)](/algorithm/TIS/README.md)`);
+      toc.push(
+        `- 문제 풀이 기록\n  - [algorithm/programmers/README.md](/algorithm/programmers/README.md)`
+      );
     }
 
     const dirPath = path.join(ROOT_DIR, dirName);
@@ -107,7 +112,7 @@ function main() {
   );
 
   fs.writeFileSync(README_PATH, newReadmeContent, "utf-8");
-  console.log("✅ README.md 목차가 성공적으로 업데이트되었습니다.");
+  console.log("✅ /README.md 목차 업데이트 성공");
 }
 
 main();

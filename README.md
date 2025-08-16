@@ -5,26 +5,24 @@
 <br>
 
 <!-- TOC_START -->
-
 ## 목차
 
-### \_log
-
-- 학습 계획과 기록
+### _log
+- 주간 공부 계획과 실제 학습 현황 기록
+  - [_log/README.md](/_log/README.md)
 
 ### algorithm
-
-- [TIS(Today I Solved)](/algorithm/TIS/README.md)
+- 문제 풀이 기록
+  - [algorithm/programmers/README.md](/algorithm/programmers/README.md)
 - [정렬 알고리즘](algorithm/sort.md)
 - [시간 복잡도](algorithm/time-complexity.md)
 
 ### architecture
-
 - [패러다임, 아키텍처, 디자인 패턴](architecture/concept-overview.md)
+- [정규화 (TODO)](architecture/normalization.md)
 - [로드맵](architecture/roadmap.md)
 
 ### browser
-
 - [접근성과 Semantic HTML](browser/a11y.md)
 - [브라우저 렌더링 과정(Critical Rendering Path)](browser/critical-rendering-path.md)
 - [이벤트 위임과 버블링, 캡처링](browser/event-delegation.md)
@@ -33,14 +31,12 @@
 - [RESTful API](browser/restful-api.md)
 
 ### css
-
 - [Box model](css/box-model.md)
 - [그리드](css/grid.md)
 - [Intrinsic Size](css/intrinsic-size.md)
 - [Position](css/position.md)
 
 ### javascript
-
 - [Array-like Object (유사 배열)](javascript/array-like.md)
 - [배열 (Array)](javascript/array.md)
 - [클로저](javascript/closure.md)
@@ -60,7 +56,9 @@
 ### project
 
 ### testing
-
 - [Black Box Testing Vs. White Box Testing](testing/blackbox-whitebox.md)
+- [Flaky test vs. Non-flaky test](testing/flaky-nonflaky.md)
+- [Mocking vs Dependency Injection](testing/mocking-di.md)
 - [vi.spyOn](testing/spyOn.md)
+- [Test double](testing/test-double.md)
 <!-- TOC_END -->
