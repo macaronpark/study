@@ -8,7 +8,7 @@
 
 ## 문제
 
-[프로그래머스 Lv.1 - 나머지가 1이 되는 수 찾기](https://school.programmers.co.kr/learn/courses/30/lessons/87389)
+[프로그래머스 Lv.1 - ]()
 
 - 설명
 
@@ -38,9 +38,6 @@ function solution(n) {}
 <br>
 
 ## 문제
-
-1.
-2.
 
 <br>
 
