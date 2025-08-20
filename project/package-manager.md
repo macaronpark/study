@@ -1,5 +1,12 @@
 # Package manager
 
+- [Package manager](#package-manager)
+  - [npm vs yarn vs pnpm](#npm-vs-yarn-vs-pnpm)
+    - [선택 기준](#선택-기준)
+    - [설치 속도](#설치-속도)
+    - [호이스팅 문제](#호이스팅-문제)
+  - [Corepack](#corepack)
+
 패키지 설치, 관리 도구. 패키지별 의존성을 자동으로 정확하게 관리해주므로 편하게 사용할 수 있다.
 
 ## npm vs yarn vs pnpm
@@ -10,12 +17,15 @@
   - 빠른 시작(node.js의 기본 패키지 매니저)
   - 호환성 넓음(node_modules 형식)
 - pnpm
-  - 엄격한 레이아웃으로 유령 의존성 방지하므로 모노레포에 사용하기 좋음
+  - 엄격한 레이아웃으로 **유령 의존성 방지**하므로 모노레포에 사용하기 좋음
   - 전역 스토어 + 하드링크로 설치 빠르고 디스크 공간 절약
+  - [Next.js의 학습 문서](https://nextjs.org/learn/dashboard-app/getting-started#creating-a-new-project)에서 pnpm을 추천
+    > We recommend using pnpm as your package manager, as it's faster and more efficient than npm or yarn.
 - yarn PnP(Zero-installs)
-  - 설치 스킵/재현성 최고
+  - **설치 스킵/재현성** 최고
+    - 단일 환경이 아니라 여러 환경에서 개발, 빌드, 실행할 때 빛을 발함
   - 새 의존성 추가·네이티브 모듈에는 설치 필요
-  - 호환성 점검 필요 (예: node_modules 형식을 요구 툴)
+  - 호환성 점검 필요 (예: node_modules 형식을 요구하는 툴을 사용하는 경우)
 
 ### 설치 속도
 

@@ -54,6 +54,7 @@
 - [값(Value)과 참조(Reference)](javascript/value-reference.md)
 
 ### project
+- [Package manager](project/package-manager.md)
 
 ### testing
 - [Black Box Testing Vs. White Box Testing](testing/blackbox-whitebox.md)
