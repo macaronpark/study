@@ -6,6 +6,7 @@
     - [설치 속도](#설치-속도)
     - [호이스팅 문제](#호이스팅-문제)
   - [Corepack](#corepack)
+  - [nvm(Node Version Manager)](#nvmnode-version-manager)
 
 패키지 설치, 관리 도구. 패키지별 의존성을 자동으로 정확하게 관리해주므로 편하게 사용할 수 있다.
 
@@ -81,3 +82,12 @@
     }
     ```
   - 평소처럼: pnpm install → 자동 다운로드, 캐시, 실행
+
+## nvm(Node Version Manager)
+
+- node.js 버전을 관리해주는 도구
+- 맥이나 리눅스에서 여러 node.js 버전을 쉽게 설치하고, 바꿔가며 사용할 수 있음
+  - 프로젝트마다 요구하는 버전이 다를 경우 바꿔가며 사용 필요
+- nvm vs brew/apt
+  - brew/apt: 한 버전만 깔아두고 사용
+  - nvm: **필요할 때마다 버전 스위치 가능**
