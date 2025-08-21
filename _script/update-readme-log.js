@@ -22,25 +22,10 @@ function main() {
       .reverse(); // 최신 주차가 위로 오도록 역순 정렬
 
     for (const dirName of weeklyDirs) {
-      tocLines.push(`\n### [${dirName}](./${dirName})`);
-      const weeklyDirPath = path.join(LOG_DIR, dirName);
-      const files = fs
-        .readdirSync(weeklyDirPath)
-        .filter((file) => file.endsWith(".md"))
-        .sort();
-
-      for (const file of files) {
-        const filePath = `./${dirName}/${file}`;
-        // README.md 또는 READMD.md (오타 고려) 파일을 '주간 회고'로 처리
-        if (file.toUpperCase().startsWith("READM")) {
-          tocLines.push(`- [주간 회고](${filePath})`);
-        } else {
-          tocLines.push(`- [${file.replace(".md", "")}](${filePath})`);
-        }
-      }
+      tocLines.push(`- [${dirName}](./${dirName}/README.md)`);
     }
 
-    // README.md 파일 읽기
+    // _log/README.md 파일 읽기
     let readmeContent;
     try {
       readmeContent = fs.readFileSync(README_PATH, "utf-8");
@@ -55,7 +40,7 @@ function main() {
 
     // 기존 TOC 내용을 새로운 내용으로 교체
     const newReadmeContent = readmeContent.replace(
-      new RegExp(`${tocStartMarker}[\s\S]*${tocEndMarker}`),
+      new RegExp(`${tocStartMarker}[\\s\\S]*${tocEndMarker}`),
       `${tocStartMarker}\n${tocContent}\n${tocEndMarker}`
     );
 

@@ -56,6 +56,7 @@ function generateTocForDir(dirPath, relativePathPrefix = "") {
           if (entry.name === "programmers") continue;
 
           // 서브 폴더의 파일들을 들여쓰기하여 추가
+          tocLines.push(`- ${entry.name}`);
           tocLines = tocLines.concat(subTocLines.map((line) => `  ${line}`));
         }
       } else if (entry.isFile() && entry.name.endsWith(".md")) {
