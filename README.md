@@ -26,6 +26,7 @@
 - [접근성과 Semantic HTML](browser/a11y.md)
 - [브라우저 렌더링 과정(Critical Rendering Path)](browser/critical-rendering-path.md)
 - [이벤트 위임과 버블링, 캡처링](browser/event-delegation.md)
+- [이미지 포맷](browser/image-format.md)
 - [PWA(Progressive Web App)](browser/pwa.md)
 - [Reflow vs. Repaint](browser/reflow-repaint.md)
 - [RESTful API](browser/restful-api.md)
