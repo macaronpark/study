@@ -17,7 +17,7 @@ function getH1Title(filePath) {
   try {
     const content = fs.readFileSync(filePath, "utf-8");
     // '# '으로 시작하는 첫 줄을 찾습니다.
-    const match = content.match(/^#\s+(.*)/m);
+    const match = content.match(/^#\s+(.+?)(?:\s*<!--.*-->)?\s*$/m);
     return match ? match[1].trim() : path.basename(filePath, ".md");
   } catch (error) {
     console.error(`Error reading file ${filePath}:`, error);
