@@ -2,6 +2,7 @@
 
 ## 2025-08
 
+- [25-08-27-음양-더하기.md](/algorithm/programmers/25-08-27-음양-더하기.md)
 - [25-08-26-정수-내림차순으로-배치하기.md](/algorithm/programmers/25-08-26-정수-내림차순으로-배치하기.md)
 - [25-08-23-하샤드-수.md](/algorithm/programmers/25-08-23-하샤드-수.md)
 - [25-08-22-정수-제곱근-판별.md](/algorithm/programmers/25-08-22-정수-제곱근-판별.md)
