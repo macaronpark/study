@@ -11,23 +11,15 @@
 [프로그래머스 Lv.1 - ]()
 
 - 설명
-
-  -
-
 - 제한사항
-
-  -
-
 - 예시
-
-  -
 
 <br>
 
 ## 초기 접근
 
 ```javascript
-function solution(n) {}
+
 ```
 
 **복잡도 분석**
@@ -48,5 +40,5 @@ function solution(n) {}
 ## 해결
 
 ```javascript
-function solution(n) {}
+
 ```
