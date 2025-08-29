@@ -67,4 +67,7 @@
 - [Mocking vs Dependency Injection](testing/mocking-di.md)
 - [vi.spyOn](testing/spyOn.md)
 - [Test double](testing/test-double.md)
+
+### typescript
+- [tsconfig.json](typescript/tsconfig.md)
 <!-- TOC_END -->
