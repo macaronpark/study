@@ -2,6 +2,7 @@
 
 ## 2025-08
 
+- [25-08-29-나누어-떨어지는-숫자-배열.md](/algorithm/programmers/25-08-29-나누어-떨어지는-숫자-배열.md)
 - [25-08-28-없는-숫자-더하기.md](/algorithm/programmers/25-08-28-없는-숫자-더하기.md)
 - [25-08-27-음양-더하기.md](/algorithm/programmers/25-08-27-음양-더하기.md)
 - [25-08-26-정수-내림차순으로-배치하기.md](/algorithm/programmers/25-08-26-정수-내림차순으로-배치하기.md)
