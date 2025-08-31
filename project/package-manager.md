@@ -1,12 +1,14 @@
-# Package manager
+# Package manager <!-- omit from toc -->
 
-- [Package manager](#package-manager)
-  - [npm vs yarn vs pnpm](#npm-vs-yarn-vs-pnpm)
-    - [선택 기준](#선택-기준)
-    - [설치 속도](#설치-속도)
-    - [호이스팅 문제](#호이스팅-문제)
-  - [Corepack](#corepack)
-  - [nvm(Node Version Manager)](#nvmnode-version-manager)
+- [npm vs yarn vs pnpm](#npm-vs-yarn-vs-pnpm)
+  - [선택 기준](#선택-기준)
+  - [설치 속도](#설치-속도)
+  - [호이스팅 문제](#호이스팅-문제)
+- [Corepack](#corepack)
+- [nvm(Node Version Manager)](#nvmnode-version-manager)
+- [pnpm](#pnpm)
+  - [`pnpm dlx` (`pnpx`)](#pnpm-dlx-pnpx)
+  - [`pnpm exec`](#pnpm-exec)
 
 패키지 설치, 관리 도구. 패키지별 의존성을 자동으로 정확하게 관리해주므로 편하게 사용할 수 있다.
 
@@ -91,3 +93,22 @@
 - nvm vs brew/apt
   - brew/apt: 한 버전만 깔아두고 사용
   - nvm: **필요할 때마다 버전 스위치 가능**
+
+## pnpm
+
+### `pnpm dlx` (`pnpx`)
+
+- npm의 `npx`와 같은 역할을 하는 명령어
+- 패키지를 **설치하지 않고도, 임시로 실행**할 수 있게 해줌
+  - 전역으로 설치 안함
+  - 프로젝트 디펜던시로 설치 안함
+- 동작 방식
+  - pnpm dlx <패키지명> 을 실행하면
+  - (1) 해당 패키지를 캐시에 설치
+  - (2) 지정된 실행 파일(bin) 실행
+  - (3) 실행이 끝나면 필요에 따라 캐시된 파일을 정리
+
+### `pnpm exec`
+
+- **프로젝트에 설치된 의존성들의 실행 파일(bin)을 바로 실행**할 수 있음
+- 예: 프로젝트 디펜던시로 jest를 설치했다면 jest를 전역으로 설치할 필요없이 `pnpm exec jest`로 실행 가능
