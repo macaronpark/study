@@ -57,7 +57,7 @@
 ### style
 - css-core
   - [Box model](style/css-core/box-model.md)
-  - [그리드](style/css-core/grid.md)
+  - [Flex와 Grid](style/css-core/flex-grid.md)
   - [Intrinsic Size](style/css-core/intrinsic-size.md)
   - [Position](style/css-core/position.md)
 - [TailwindCSS](style/tailwind.md)
