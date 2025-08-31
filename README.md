@@ -52,6 +52,7 @@
 - [vercel 배포 with cloudflare 도메인](project/deployment-vercel-cloudflare.md)
 - [Package manager](project/package-manager.md)
 - [SSH(Secure Shell)](project/ssh.md)
+- [vim](project/vim.md)
 
 ### style
 - css-core
