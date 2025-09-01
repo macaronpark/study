@@ -7,10 +7,18 @@
 - [Corepack](#corepack)
 - [nvm(Node Version Manager)](#nvmnode-version-manager)
 - [pnpm](#pnpm)
-  - [`pnpm dlx` (`pnpx`)](#pnpm-dlx-pnpx)
-  - [`pnpm exec`](#pnpm-exec)
+  - [패키지 관리](#패키지-관리)
+    - [`pnpm install` (`pnpm i`)](#pnpm-install-pnpm-i)
+    - [`pnpm add`](#pnpm-add)
+  - [스크립트 실행](#스크립트-실행)
+    - [`pnpm dlx` (`pnpx`)](#pnpm-dlx-pnpx)
+    - [`pnpm exec`](#pnpm-exec)
+
+<br>
 
 패키지 설치, 관리 도구. 패키지별 의존성을 자동으로 정확하게 관리해주므로 편하게 사용할 수 있다.
+
+<br>
 
 ## npm vs yarn vs pnpm
 
@@ -63,6 +71,8 @@
   - 선언하지 않은 의존성은 무조건 에러 → "우연히 되는" 상황 원천 차단
   - zip 캐시 + 로더로만 접근하므로 충돌 없음ㅊ
 
+<br>
+
 ## Corepack
 
 - 문제
@@ -85,6 +95,8 @@
     ```
   - 평소처럼: pnpm install → 자동 다운로드, 캐시, 실행
 
+<br>
+
 ## nvm(Node Version Manager)
 
 - node.js 버전을 관리해주는 도구
@@ -94,9 +106,41 @@
   - brew/apt: 한 버전만 깔아두고 사용
   - nvm: **필요할 때마다 버전 스위치 가능**
 
+<br>
+
 ## pnpm
 
-### `pnpm dlx` (`pnpx`)
+### 패키지 관리
+
+#### `pnpm install` (`pnpm i`)
+
+- 작동 방식
+  - `pnpm-lock.yml`에 기록된 버전을 우선적으로 설치
+    - 팀원과 매번 같은 버전을 설치하기 위해서는 `pnpm-lock.yml`을 커밋해야 함
+  - 없다면 `package.json`의 버전 범위(`^`, `~`, `*` 등)에 맞춰 새 버전을 찾음
+  - 찾은 결과를 다시 `pnpm-lock.yml`에 기록
+
+#### `pnpm add`
+
+- Options
+  - `--save-dev`(`-D`)
+    - `pnpm add`로 패키지를 설치하는 방식은 두 가지가 있음
+      - (1) dependencies
+        - 실제 앱이 런타임(프로덕션 실행)에 필요한 라이브러리
+        - 예: `next.js`, `react`, `axios`
+      - (2) devDependencies
+        - 개발할 때만 필요한 툴, 빌드 시점 도구, 테스트 라이브러리
+        - 예: `prettier`, `eslint`, `vitest`, `vite`
+  - `--save-exact`(`-E`)
+    - 설치할 때 지정된 버전 그대로 package.json에 기록함
+    - **버전에 따라 포맷 결과가 달라질 수 있기 때문에** 이 옵션을 사용하여 고정
+    - 옵션을 사용하지 않으면
+      - `"prettier": "^3.3.3"`와 같이 캐럿(^) 버전이 기록됨
+      - `pnpm update` 시, `3.x.x` 범위 안에서 최신 패치/마이너 버전을 자동으로 설치할 수 있다는 뜻
+
+### 스크립트 실행
+
+#### `pnpm dlx` (`pnpx`)
 
 - npm의 `npx`와 같은 역할을 하는 명령어
 - 패키지를 **설치하지 않고도, 임시로 실행**할 수 있게 해줌
@@ -108,7 +152,7 @@
   - (2) 지정된 실행 파일(bin) 실행
   - (3) 실행이 끝나면 필요에 따라 캐시된 파일을 정리
 
-### `pnpm exec`
+#### `pnpm exec`
 
 - **프로젝트에 설치된 의존성들의 실행 파일(bin)을 바로 실행**할 수 있음
 - 예: 프로젝트 디펜던시로 jest를 설치했다면 jest를 전역으로 설치할 필요없이 `pnpm exec jest`로 실행 가능
