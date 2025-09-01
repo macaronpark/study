@@ -88,7 +88,6 @@ function readReadmeContent(readmePath) {
 function updateReadme(content, toc) {
   const tocRegex = new RegExp(`${TOC_START_MARKER}[\\s\\S]*${TOC_END_MARKER}`);
   const newTocBlock = `${TOC_START_MARKER}\n\n${toc}\n\n${TOC_END_MARKER}`;
-  console.log(tocRegex);
 
   return content.replace(tocRegex, newTocBlock);
 }
