@@ -38,6 +38,7 @@
 - [이벤트 루프 (Event loop)](javascript/event-loop.md)
 - [함수 선언문, 함수 표현식, 화살표 함수](javascript/function.md)
 - [let, const, var](javascript/let-const-var.md)
+- [메모리](javascript/memory.md)
 - [부동소수점의 정밀도 한계](javascript/number.md)
 - [Object (객체)](javascript/object-map-set.md)
 - [연산자](javascript/operator.md)
@@ -51,6 +52,7 @@
 ### project
 - [vercel 배포 with cloudflare 도메인](project/deployment-vercel-cloudflare.md)
 - [Package manager](project/package-manager.md)
+- [Prettier](project/prettier.md)
 - [SSH(Secure Shell)](project/ssh.md)
 - [vim](project/vim.md)
 
