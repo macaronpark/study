@@ -6,6 +6,7 @@
 
 ## 2025-09
 
+- [25-09-07-약수의-개수와-덧셈.md](/algorithm/programmers/25-09-07-약수의-개수와-덧셈.md)
 - [25-09-05-수박수박수박수박수박수?.md](/algorithm/programmers/25-09-05-수박수박수박수박수박수?.md)
 - [25-09-04-내적.md](/algorithm/programmers/25-09-04-내적.md)
 - [25-09-03-제일-작은-수-제거하기.md](/algorithm/programmers/25-09-03-제일-작은-수-제거하기.md)
