@@ -62,6 +62,8 @@
   - [Flex와 Grid](style/css-core/flex-grid.md)
   - [Intrinsic Size](style/css-core/intrinsic-size.md)
   - [Position](style/css-core/position.md)
+  - [Pseudo-class](style/css-core/pseudo-class.md)
+  - [CSS 가독성](style/css-core/readability.md)
 - [Color Contrast](style/color-contrast.md)
 - [TailwindCSS](style/tailwind.md)
 
