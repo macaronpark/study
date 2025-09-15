@@ -1,4 +1,4 @@
-## CSR, SSR, ISR
+# CSR, SSR, ISR <!-- omit from toc -->
 
 - `CSR(Client Side Rendering)`
   - 첫 로딩 느림, 페이지 전환 빠름

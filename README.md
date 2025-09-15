@@ -19,13 +19,16 @@
 
 ### architecture
 - [패러다임, 아키텍처, 디자인 패턴](architecture/concept-overview.md)
+- [MVC, MVP, MVVM](architecture/mvc-mvp-mvvm.md)
 - [정규화 (TODO)](architecture/normalization.md)
 - [로드맵](architecture/roadmap.md)
 
 ### browser
 - [접근성과 Semantic HTML](browser/a11y.md)
 - [인증 관리](browser/auth.md)
+- [CORS(Cross Origin Resource Sharing)](browser/cors.md)
 - [브라우저 렌더링 과정(Critical Rendering Path)](browser/critical-rendering-path.md)
+- [CSR, SSR, ISR](browser/csr-ssr-isr.md)
 - [이벤트 위임과 버블링, 캡처링](browser/event-delegation.md)
 - [이미지 포맷](browser/image-format.md)
 - [PWA(Progressive Web App)](browser/pwa.md)
