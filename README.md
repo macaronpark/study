@@ -20,8 +20,10 @@
 ### architecture
 - [패러다임, 아키텍처, 디자인 패턴](architecture/concept-overview.md)
 - [MVC, MVP, MVVM](architecture/mvc-mvp-mvvm.md)
+- [Next.js Folder Structure](architecture/nexjs-folder-structure.md)
 - [정규화 (TODO)](architecture/normalization.md)
 - [로드맵](architecture/roadmap.md)
+- [SOLID 원칙](architecture/solid.md)
 
 ### browser
 - [접근성과 Semantic HTML](browser/a11y.md)
@@ -36,6 +38,8 @@
 - [RESTful API](browser/restful-api.md)
 
 ### cs
+- [캐시 지역성 (Cache Locality)](cs/cache-locality.md)
+- [결합도(Coupling)와 응집도(Cohesion)](cs/coupling-cohesion.md)
 - [메모리](cs/memory.md)
 - [재귀 함수](cs/recursion.md)
 
