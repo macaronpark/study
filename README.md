@@ -35,6 +35,10 @@
 - [Reflow vs. Repaint](browser/reflow-repaint.md)
 - [RESTful API](browser/restful-api.md)
 
+### cs
+- [메모리](cs/memory.md)
+- [재귀 함수](cs/recursion.md)
+
 ### javascript
 - [Array-like Object (유사 배열)](javascript/array-like.md)
 - [배열 (Array)](javascript/array.md)
@@ -42,11 +46,9 @@
 - [이벤트 루프 (Event loop)](javascript/event-loop.md)
 - [함수 선언문, 함수 표현식, 화살표 함수](javascript/function.md)
 - [let, const, var](javascript/let-const-var.md)
-- [메모리](javascript/memory.md)
 - [부동소수점의 정밀도 한계](javascript/number.md)
 - [Object (객체)](javascript/object-map-set.md)
 - [연산자](javascript/operator.md)
-- [재귀 함수](javascript/recursion.md)
 - [얕은 복사(Shallow copy) vs. 깊은 복사(Deep copy)](javascript/shallow-and-deep-copy.md)
 - [조건문, 반복문](javascript/statement.md)
 - [this](javascript/this.md)
