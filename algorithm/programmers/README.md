@@ -6,6 +6,7 @@
 
 ## 2025-09
 
+- [25-09-19-같은-숫자는-싫어.md](/algorithm/programmers/25-09-19-같은-숫자는-싫어.md)
 - [25-09-19-전화번호-목록.md](/algorithm/programmers/25-09-19-전화번호-목록.md)
 - [25-09-16-폰켓몬.md](/algorithm/programmers/25-09-16-폰켓몬.md)
 - [25-09-15-완주하지-못한-선수.md](/algorithm/programmers/25-09-15-완주하지-못한-선수.md)
