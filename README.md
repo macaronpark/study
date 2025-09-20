@@ -40,6 +40,7 @@
 ### cs
 - [캐시 지역성 (Cache Locality)](cs/cache-locality.md)
 - [결합도(Coupling)와 응집도(Cohesion)](cs/coupling-cohesion.md)
+- [git](cs/git.md)
 - [메모리](cs/memory.md)
 - [재귀 함수](cs/recursion.md)
 
