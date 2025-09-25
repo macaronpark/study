@@ -63,6 +63,7 @@
 
 ### project
 - [vercel 배포 with cloudflare 도메인](project/deployment-vercel-cloudflare.md)
+- [next.js](project/nextjs.md)
 - [Package manager](project/package-manager.md)
 - [Prettier](project/prettier.md)
 - [SSH(Secure Shell)](project/ssh.md)
