@@ -6,6 +6,7 @@
 
 ## 2025-09
 
+- [25-09-27-직사각형-별찍기.md](/algorithm/programmers/25-09-27-직사각형-별찍기.md)
 - [25-09-24-행렬의-덧셈.md](/algorithm/programmers/25-09-24-행렬의-덧셈.md)
 - [25-09-20-게임-맵-최단거리.md](/algorithm/programmers/25-09-20-게임-맵-최단거리.md)
 - [25-09-20-타겟-넘버.md](/algorithm/programmers/25-09-20-타겟-넘버.md)
