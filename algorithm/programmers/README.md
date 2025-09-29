@@ -1,52 +1,49 @@
 # Programmers <!-- omit from toc -->
 
-- [2025-09](#2025-09)
-- [2025-08](#2025-08)
-- [2025-07](#2025-07)
+- [2025-3Q](#2025-3q)
 
-## 2025-09
+<br>
 
-- [25-09-28-크기가-작은-부분문자열.md](/algorithm/programmers/25-09-28-크기가-작은-부분문자열.md)
-- [25-09-27-최대공약수와-최소공배수.md](/algorithm/programmers/25-09-27-최대공약수와-최소공배수.md)
-- [25-09-27-직사각형-별찍기.md](/algorithm/programmers/25-09-27-직사각형-별찍기.md)
-- [25-09-24-행렬의-덧셈.md](/algorithm/programmers/25-09-24-행렬의-덧셈.md)
-- [25-09-20-게임-맵-최단거리.md](/algorithm/programmers/25-09-20-게임-맵-최단거리.md)
-- [25-09-20-타겟-넘버.md](/algorithm/programmers/25-09-20-타겟-넘버.md)
-- [25-09-19-올바른-괄호.md](/algorithm/programmers/25-09-19-올바른-괄호.md)
-- [25-09-19-같은-숫자는-싫어.md](/algorithm/programmers/25-09-19-같은-숫자는-싫어.md)
-- [25-09-19-전화번호-목록.md](/algorithm/programmers/25-09-19-전화번호-목록.md)
-- [25-09-16-폰켓몬.md](/algorithm/programmers/25-09-16-폰켓몬.md)
-- [25-09-15-완주하지-못한-선수.md](/algorithm/programmers/25-09-15-완주하지-못한-선수.md)
-- [25-09-12-문자열-다루기-기본.md](/algorithm/programmers/25-09-12-문자열-다루기-기본.md)
-- [25-09-11-부족한-금액-계산하기.md](/algorithm/programmers/25-09-11-부족한-금액-계산하기.md)
-- [25-09-10-문자열-내림차순으로-배치하기.md](/algorithm/programmers/25-09-10-문자열-내림차순으로-배치하기.md)
-- [25-09-07-약수의-개수와-덧셈.md](/algorithm/programmers/25-09-07-약수의-개수와-덧셈.md)
-- [25-09-05-수박수박수박수박수박수?.md](/algorithm/programmers/25-09-05-수박수박수박수박수박수?.md)
-- [25-09-04-내적.md](/algorithm/programmers/25-09-04-내적.md)
-- [25-09-03-제일-작은-수-제거하기.md](/algorithm/programmers/25-09-03-제일-작은-수-제거하기.md)
-- [25-09-02-가운데-글자-가져오기.md](/algorithm/programmers/25-09-02-가운데-글자-가져오기.md)
-- [25-09-01-핸드폰-번호-가리기.md](/algorithm/programmers/25-09-01-핸드폰-번호-가리기.md)
+## 2025-3Q
 
-## 2025-08
-
-- [25-08-31-콜라츠-추측.md](/algorithm/programmers/25-08-31-콜라츠-추측.md)
-- [25-08-30-서울에서-김서방-찾기.md](/algorithm/programmers/25-08-30-서울에서-김서방-찾기.md)
-- [25-08-29-나누어-떨어지는-숫자-배열.md](/algorithm/programmers/25-08-29-나누어-떨어지는-숫자-배열.md)
-- [25-08-28-없는-숫자-더하기.md](/algorithm/programmers/25-08-28-없는-숫자-더하기.md)
-- [25-08-27-음양-더하기.md](/algorithm/programmers/25-08-27-음양-더하기.md)
-- [25-08-26-정수-내림차순으로-배치하기.md](/algorithm/programmers/25-08-26-정수-내림차순으로-배치하기.md)
-- [25-08-23-하샤드-수.md](/algorithm/programmers/25-08-23-하샤드-수.md)
-- [25-08-22-정수-제곱근-판별.md](/algorithm/programmers/25-08-22-정수-제곱근-판별.md)
-- [25-08-21-문자열-내-p와-y의-개수.md](/algorithm/programmers/25-08-21-문자열-내-p와-y의-개수.md)
-- [25-08-20-두-정수-사이의-합.md](/algorithm/programmers/25-08-20-두-정수-사이의-합.md)
-- [25-08-19-약수의-합.md](/algorithm/programmers/25-08-19-약수의-합.md)
-- [25-08-18-문자열을-정수로-바꾸기.md](/algorithm/programmers/25-08-18-문자열을-정수로-바꾸기.md)
-- [25-08-16-나머지가-1이-되는-수-찾기.md](/algorithm/programmers/25-08-16-나머지가-1이-되는-수-찾기.md)
-- [25-08-15-x만큼-간격이-있는-n개의-숫자.md](/algorithm/programmers/25-08-15-x만큼-간격이-있는-n개의-숫자.md)
-- [25-08-14-평균-구하기.md](/algorithm/programmers/25-08-14-평균-구하기.md)
-- [25-08-13-짝수와-홀수.md](/algorithm/programmers/25-08-13-짝수와-홀수.md)
-- [25-08-12-자연수-뒤집어-배열로-만들기.md](/algorithm/programmers/25-08-12-자연수-뒤집어-배열로-만들기.md)
-- [25-08-11-자릿수-더하기.md](/algorithm/programmers/25-08-11-자릿수-더하기.md)
+- [25-09-28-크기가-작은-부분문자열.md](/algorithm/programmers/25-3Q/25-09-28-크기가-작은-부분문자열.md)
+- [25-09-27-최대공약수와-최소공배수.md](/algorithm/programmers/25-3Q/25-09-27-최대공약수와-최소공배수.md)
+- [25-09-27-직사각형-별찍기.md](/algorithm/programmers/25-3Q/25-09-27-직사각형-별찍기.md)
+- [25-09-24-행렬의-덧셈.md](/algorithm/programmers/25-3Q/25-09-24-행렬의-덧셈.md)
+- [25-09-20-게임-맵-최단거리.md](/algorithm/programmers/25-3Q/25-09-20-게임-맵-최단거리.md)
+- [25-09-20-타겟-넘버.md](/algorithm/programmers/25-3Q/25-09-20-타겟-넘버.md)
+- [25-09-19-올바른-괄호.md](/algorithm/programmers/25-3Q/25-09-19-올바른-괄호.md)
+- [25-09-19-같은-숫자는-싫어.md](/algorithm/programmers/25-3Q/25-09-19-같은-숫자는-싫어.md)
+- [25-09-19-전화번호-목록.md](/algorithm/programmers/25-3Q/25-09-19-전화번호-목록.md)
+- [25-09-16-폰켓몬.md](/algorithm/programmers/25-3Q/25-09-16-폰켓몬.md)
+- [25-09-15-완주하지-못한-선수.md](/algorithm/programmers/25-3Q/25-09-15-완주하지-못한-선수.md)
+- [25-09-12-문자열-다루기-기본.md](/algorithm/programmers/25-3Q/25-09-12-문자열-다루기-기본.md)
+- [25-09-11-부족한-금액-계산하기.md](/algorithm/programmers/25-3Q/25-09-11-부족한-금액-계산하기.md)
+- [25-09-10-문자열-내림차순으로-배치하기.md](/algorithm/programmers/25-3Q/25-09-10-문자열-내림차순으로-배치하기.md)
+- [25-09-07-약수의-개수와-덧셈.md](/algorithm/programmers/25-3Q/25-09-07-약수의-개수와-덧셈.md)
+- [25-09-05-수박수박수박수박수박수?.md](/algorithm/programmers/25-3Q/25-09-05-수박수박수박수박수박수?.md)
+- [25-09-04-내적.md](/algorithm/programmers/25-3Q/25-09-04-내적.md)
+- [25-09-03-제일-작은-수-제거하기.md](/algorithm/programmers/25-3Q/25-09-03-제일-작은-수-제거하기.md)
+- [25-09-02-가운데-글자-가져오기.md](/algorithm/programmers/25-3Q/25-09-02-가운데-글자-가져오기.md)
+- [25-09-01-핸드폰-번호-가리기.md](/algorithm/programmers/25-3Q/25-09-01-핸드폰-번호-가리기.md)
+- [25-08-31-콜라츠-추측.md](/algorithm/programmers/25-3Q/25-08-31-콜라츠-추측.md)
+- [25-08-30-서울에서-김서방-찾기.md](/algorithm/programmers/25-3Q/25-08-30-서울에서-김서방-찾기.md)
+- [25-08-29-나누어-떨어지는-숫자-배열.md](/algorithm/programmers/25-3Q/25-08-29-나누어-떨어지는-숫자-배열.md)
+- [25-08-28-없는-숫자-더하기.md](/algorithm/programmers/25-3Q/25-08-28-없는-숫자-더하기.md)
+- [25-08-27-음양-더하기.md](/algorithm/programmers/25-3Q/25-08-27-음양-더하기.md)
+- [25-08-26-정수-내림차순으로-배치하기.md](/algorithm/programmers/25-3Q/25-08-26-정수-내림차순으로-배치하기.md)
+- [25-08-23-하샤드-수.md](/algorithm/programmers/25-3Q/25-08-23-하샤드-수.md)
+- [25-08-22-정수-제곱근-판별.md](/algorithm/programmers/25-3Q/25-08-22-정수-제곱근-판별.md)
+- [25-08-21-문자열-내-p와-y의-개수.md](/algorithm/programmers/25-3Q/25-08-21-문자열-내-p와-y의-개수.md)
+- [25-08-20-두-정수-사이의-합.md](/algorithm/programmers/25-3Q/25-08-20-두-정수-사이의-합.md)
+- [25-08-19-약수의-합.md](/algorithm/programmers/25-3Q/25-08-19-약수의-합.md)
+- [25-08-18-문자열을-정수로-바꾸기.md](/algorithm/programmers/25-3Q/25-08-18-문자열을-정수로-바꾸기.md)
+- [25-08-16-나머지가-1이-되는-수-찾기.md](/algorithm/programmers/25-3Q/25-08-16-나머지가-1이-되는-수-찾기.md)
+- [25-08-15-x만큼-간격이-있는-n개의-숫자.md](/algorithm/programmers/25-3Q/25-08-15-x만큼-간격이-있는-n개의-숫자.md)
+- [25-08-14-평균-구하기.md](/algorithm/programmers/25-3Q/25-08-14-평균-구하기.md)
+- [25-08-13-짝수와-홀수.md](/algorithm/programmers/25-3Q/25-08-13-짝수와-홀수.md)
+- [25-08-12-자연수-뒤집어-배열로-만들기.md](/algorithm/programmers/25-3Q/25-08-12-자연수-뒤집어-배열로-만들기.md)
+- [25-08-11-자릿수-더하기.md](/algorithm/programmers/25-3Q/25-08-11-자릿수-더하기.md)
 - 2025-08-09 `프로그래머스` Lv. 0 - 개미 군단
 - 2025-08-09 `프로그래머스` Lv. 0 - 모스부호 (1)
 - 2025-08-09 `프로그래머스` Lv. 0 - 가위 바위 보
@@ -86,9 +83,6 @@
 - 2025-08-01 `프로그래머스` Lv. 0 - 배열 두배 만들기
 - 2025-08-01 `프로그래머스` Lv. 0 - 나머지 구하기
 - 2025-08-01 `프로그래머스` Lv. 0 - 나이 출력
-
-## 2025-07
-
 - 2025-07-31 `프로그래머스` Lv. 0 - 리스트 자르기
 - 2025-07-31 `프로그래머스` Lv. 0 - 배열 조각하기
 - 2025-07-31 `프로그래머스` Lv. 0 - 왼쪽 오른쪽
