@@ -6,6 +6,7 @@
 
 ## 2025-3Q
 
+- [25-09-30-3진법-뒤집기.md](/algorithm/programmers/25-3Q/25-09-30-3진법-뒤집기.md)
 - [25-09-29-예산.md](/algorithm/programmers/25-3Q/25-09-29-예산.md)
 - [25-09-28-크기가-작은-부분문자열.md](/algorithm/programmers/25-3Q/25-09-28-크기가-작은-부분문자열.md)
 - [25-09-27-최대공약수와-최소공배수.md](/algorithm/programmers/25-3Q/25-09-27-최대공약수와-최소공배수.md)
