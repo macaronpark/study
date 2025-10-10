@@ -7,6 +7,7 @@
 
 ## 2025-4Q
 
+- [25-10-10-최소직사각형.md](/algorithm/programmers/25-4Q/25-10-10-최소직사각형.md)
 - [25-10-09-이상한-문자-만들기.md](/algorithm/programmers/25-4Q/25-10-09-이상한-문자-만들기.md)
 - [25-10-08-삼총사.md](/algorithm/programmers/25-4Q/25-10-08-삼총사.md)
 
