@@ -64,6 +64,7 @@
 ### project
 - [vercel 배포 with cloudflare 도메인](project/deployment-vercel-cloudflare.md)
 - [개발 환경 설정](project/dev-env-setup.md)
+- [Minification](project/minification.md)
 - [next.js](project/nextjs.md)
 - [Package manager](project/package-manager.md)
 - [Prettier](project/prettier.md)
