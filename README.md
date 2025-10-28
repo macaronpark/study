@@ -45,6 +45,9 @@
 - [메모리](cs/memory.md)
 - [재귀 함수](cs/recursion.md)
 
+### domain
+- [비즈니스 지표](domain/buisiness-metrics.md)
+
 ### javascript
 - [Array-like Object (유사 배열)](javascript/array-like.md)
 - [배열 (Array)](javascript/array.md)
@@ -64,7 +67,6 @@
 ### project
 - [vercel 배포 with cloudflare 도메인](project/deployment-vercel-cloudflare.md)
 - [개발 환경 설정](project/dev-env-setup.md)
-- [Minification](project/minification.md)
 - [next.js](project/nextjs.md)
 - [Package manager](project/package-manager.md)
 - [Prettier](project/prettier.md)
