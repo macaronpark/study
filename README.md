@@ -89,6 +89,9 @@
 - [vi.spyOn](testing/spyOn.md)
 - [Test double](testing/test-double.md)
 
+### troubleshooting
+- [Third-party JS Script 최적화 - Minification 미적용 이슈](troubleshooting/25-10-minification.md)
+
 ### typescript
 - [tsconfig.json](typescript/tsconfig.md)
 <!-- TOC_END -->

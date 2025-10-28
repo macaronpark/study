@@ -60,6 +60,8 @@ function generateTocForDir(dirPath, relativePathPrefix = "") {
           tocLines = tocLines.concat(subTocLines.map((line) => `  ${line}`));
         }
       } else if (entry.isFile() && entry.name.endsWith(".md")) {
+        if (relativePath.endsWith("_template.md")) continue;
+
         const title = getH1Title(fullPath);
         tocLines.push(`- [${title}](${relativePath})`);
       }
