@@ -2,9 +2,12 @@
 
 - [용어](#용어)
 - [연산자 우선순위](#연산자-우선순위)
-- [falsy와 truthy](#falsy와-truthy)
-- [논리 연산자](#논리-연산자)
+- [Falsy, Truthy](#falsy-truthy)
+- [Logical operator](#logical-operator)
+- [Assignment(`=`) operator](#assignment-operator)
 - [참고](#참고)
+
+<br>
 
 ## 용어
 
@@ -23,12 +26,16 @@
   - `%` 두 항을 나눈 후 나머지 반환
   - `**` 거듭제곱 연산.
 
+<br>
+
 ## 연산자 우선순위
 
 - 단항 연산자의 우선순위가 이항 연산자의 우선순위보다 높다.
 - `( )` 를 사용해 우선순위를 높일 수 있다.
 
-## falsy와 truthy
+<br>
+
+## Falsy, Truthy
 
 - falsy
   - `false`
@@ -45,18 +52,38 @@
   - `"false"`
   - `() => {}`
 
-## 논리 연산자
+<br>
 
-- `||`
+
+## Logical operator
+
+- Logical OR(`||`)
   - 왼쪽부터 처음 등장하는 truthy 값을 그대로 반환
   - 모두 falsy면 마지막 피연산자 반환
-- `&&`
+- Logical AND(`&&`)
   - 왼쪽부터 처음 등장하는 falsy 값을 그대로 반환
   - 모두 truthy면 마지막 피연산자 반환
 - 예
   - `0 && "A" || "B"` => B
   - `(0 || ("A" && "B")) ?? "C"` => B
   - `(("") ?? "K") && (false || (null ?? []))` => ""
+
+<br>
+
+## Assignment(`=`) operator
+
+- 할당 연산자는 할당된 값을 반환
+  ```js
+  let a = 1
+  a = 4 // This expression returns 4
+  ```
+  - This is what makes chaining assignment possible.
+    ```js
+    let x, y, z
+    x = y = z = 10
+    ```
+
+<br>
 
 ## 참고
 
